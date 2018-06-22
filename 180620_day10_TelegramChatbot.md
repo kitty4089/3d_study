@@ -25,10 +25,10 @@
 '/session_new' -> X
   1. 로그인 로직 구현(유저 검증 == DB에 저장된 유저인지 확인)
   2. 만약 유효한 유저라면
-  session[:email]에 유저 저장
-  redirect '/'
-  아니면
-  redirect '/login'
+    session[:email]에 유저 저장
+    redirect '/'
+    아니면
+    redirect '/login'
 
 ---
 
@@ -94,21 +94,27 @@ BotFather 와 대화창  start -> /newbot 입력 -> 이름 정하기
 
 ##### MEHOD_NAME에 쓰는 하려는 것들 ex.
 
-- getMe ==> Json형태로 **내 정보**가 나온다
+- **getMe** ==> Json형태로 **내 정보**가 나온다
 
-* getUpdates :  내 봇의 상태 업데이트
+* **getUpdates** :  내 봇의 상태 업데이트
 
 ![1529467412285](C:\Users\student\AppData\Local\Temp\1529467412285.png)
 
 *api에서 **sendMessage** 부분 참고
 
-	- 특히. id에 내 챗봇의 id번호를 입력하면 
+- 특히. id에 내 챗봇의 id번호를 입력하면  '챗봇이 챗봇한테는 메시지 못보낸다'는 에러메시지가 나옴
+
+
 
 
 
 ![1529462207308](C:\Users\student\AppData\Local\Temp\1529462207308.png)
 
 위에 클릭하면 내 챗봇과 대화 가능
+
+![1529542343032](C:\Users\student\AppData\Local\Temp\1529542343032.png)
+
+/getMe화면!!
 
 
 
@@ -129,3 +135,68 @@ https://api.telegram.org/bot397628463:AAEC4uGnenoBkFna1a3FLbXTdqW-yqCgS2U/sendMe
 ![1529540845742](C:\Users\student\AppData\Local\Temp\1529540845742.png)
 
 보내진 모습
+
+
+
+- url로 치면 아래와 같은 페이지가 나오고 텔레그램 메신저에 메시지가 와있당
+
+![1529542025266](C:\Users\student\AppData\Local\Temp\1529542025266.png)
+
+
+
+
+
+
+
+
+
+### 메시지 보내는 코딩 vscode에서 .rb로 저장. 
+
+#### -> 코드 실행은 git bash에서.
+
+​     :  해당 디렉토리로 이동 `cd`로 -> `ruby telegram.rb` 루비야 ~~.rb 파일 좀 열어줘.
+
+![1529541352047](C:\Users\student\AppData\Local\Temp\1529541352047.png)
+
+```Ruby
+require 'httparty'  #우리(나)를 대신해 (url)요청보내주는 애
+require 'uri'  #한글 쓰기 위해서 uri로 인코딩 해 줘야 한다. 
+
+url = "https://api.telegram.org/bot"    #반복되는 부분을 url이라는 변수 안에 넣었다
+
+# +bot+token(봇파더에 있다)+/sendMessage?chat_id=XXX&text=hello"
+
+token = "  "
+
+id = " "     #챗봇 아이디 말고 내 아이디 넣어야 함 메시지 보낼 때는
+msg = URI.encode("와우 행복한 점심시간")
+url + token + "/sendMessage?chat_id=#{id}&text=#{msg}"
+
+#res = HTTParty.get(url+token+"/getMe")    #임시변수 res(response)에 받아온 결과물을 받아온다
+#json :  parsing 해서 해쉬처럼 정보를 쓸 수 있다
+
+#hash = JSON.parse(res.body)     #받아온 정보를 해쉬에 담자
+
+HTTParty.get(
+    url + token + 
+    "/sendMessage?chat_id=#{id}&text=#{msg}"
+)
+
+#puts hash
+```
+
+==> 루비 코드 짠 모습
+
+
+
+![1529541195643](C:\Users\student\AppData\Local\Temp\1529541195643.png)
+
+==> git bash에서 코드 실행
+
+
+
+
+
+- 메시지를 보낼 때마다 아래와 같이 **getUpdates**에서 보내진 내역을 볼 수 있다.
+
+  ![1529541852876](C:\Users\student\AppData\Local\Temp\1529541852876.png)
