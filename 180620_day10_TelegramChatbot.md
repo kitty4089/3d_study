@@ -24,17 +24,22 @@
 
 '/session_new' -> X
   1. 로그인 로직 구현(유저 검증 == DB에 저장된 유저인지 확인)
-  2. 만약 유효한 유저라면
-    session[:email]에 유저 저장
-    redirect '/'
-    아니면
-    redirect '/login'
 
+  2. 만약 유효한 유저라면
+
+     session[:email]에 유저 저장
+     redirect '/'
+     아니면
+     redirect '/login'
 ---
 
 
 
 
+
+
+
+***
 
 cf. **텔레그램**... 카톡같은. 보안이 뛰어남
 
