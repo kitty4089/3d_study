@@ -60,13 +60,31 @@ ko로 쓰겠다 바꿔준다
 
 
 
+한글로 어떻게 나오는 지 알고 싶으면,
+
+'gem devise i18n' 구글링 ㄱㄱ
+
 ![1531381625592](C:\Users\student\AppData\Local\Temp\1531381625592.png)
+
+제일 위에 웹페이지 들어가본당.
 
 https://github.com/tigrish/devise-i18n
 
+==> 아래와 같이 잉여가 잘 정리해 놓았다
+
 ![1531381658164](C:\Users\student\AppData\Local\Temp\1531381658164.png)
 
+위에 rails/lacales 클릭하면 아래와 같이 언어당 번역이 어떻게 되는 지 볼 수 있고
+
+페이지 자체 아래 README.md  내용 보면  gem 사용법 알 수 있당
+
 ![1531381675164](C:\Users\student\AppData\Local\Temp\1531381675164.png)
+
+ko파일 보면  영어 <-> 한글 어떻게 호환되는 지 볼 수 있당
+
+
+
+
 
 
 
@@ -76,11 +94,11 @@ https://github.com/plataformatec/devise
 
 ![1531381700230](C:\Users\student\AppData\Local\Temp\1531381700230.png)
 
-
+빨간 박스 안에 첫 줄 복사한다. 아래와 같이 로그인이 되었냐? 이런 것들을 물어볼 수 있다
 
 ![1531381709587](C:\Users\student\AppData\Local\Temp\1531381709587.png)
 
-복붙 :  인증된 유저만 로그인 시키겠다
+복붙한다.  (저 첫줄 의미:  인증된 유저만 로그인 시키겠다)
 
 
 
