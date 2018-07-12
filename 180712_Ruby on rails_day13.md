@@ -48,21 +48,9 @@ ko로 쓰겠다 바꿔준다
 
 
 
-`rails g devise:i18n:views`  : view페이지 모두 한글로 해쥼
+이제 본격 devise gem을 써보자
 
-![1531378037457](C:\Users\student\AppData\Local\Temp\1531378037457.png)
-
-애가 생김 
-
-![1531378079728](C:\Users\student\AppData\Local\Temp\1531378079728.png)
-
-이렇게 한글로 나옴
-
-
-
-한글로 어떻게 나오는 지 알고 싶으면,
-
-'gem devise i18n' 구글링 ㄱㄱ
+('gem devise i18n' 구글링 ㄱㄱ)
 
 ![1531381625592](C:\Users\student\AppData\Local\Temp\1531381625592.png)
 
@@ -70,19 +58,49 @@ ko로 쓰겠다 바꿔준다
 
 https://github.com/tigrish/devise-i18n
 
+- 페이지 자체 아래로 스크롤 내려서 README.md  내용 보면  gem 사용법 알 수 있당
+
+![1531385241384](C:\Users\student\AppData\Local\Temp\1531385241384.png)
+
+저 코드 복사     `rails g devise:i18n:views`   :  view페이지들 모두 한글로 해쥼
+
+
+
+콘솔창에 붙여넣기 . enter.
+
+![1531378037457](C:\Users\student\AppData\Local\Temp\1531378037457.png)
+
+애가 생김 
+
+
+
+![1531378079728](C:\Users\student\AppData\Local\Temp\1531378079728.png)
+
+이렇게 view페이지가 한글로 나옴
+
+
+
+---
+
+*cf.* 한글로 어떻게 번역되는지 알고 싶으면,
+
+또 아까 그 깃헙  페이지 ('gem devise i18n' 구글링 ㄱㄱ)
+
+https://github.com/tigrish/devise-i18n
+
 ==> 아래와 같이 잉여가 잘 정리해 놓았다
 
 ![1531381658164](C:\Users\student\AppData\Local\Temp\1531381658164.png)
 
-위에 rails/lacales 클릭하면 아래와 같이 언어당 번역이 어떻게 되는 지 볼 수 있고
-
-페이지 자체 아래 README.md  내용 보면  gem 사용법 알 수 있당
+위에 rails/lacales 클릭
 
 ![1531381675164](C:\Users\student\AppData\Local\Temp\1531381675164.png)
 
 ko파일 보면  영어 <-> 한글 어떻게 호환되는 지 볼 수 있당
 
+(언어마다 번역이 어떻게 되는지)
 
+---
 
 
 
@@ -366,7 +384,7 @@ ex.  아래와 같이 4개 요소가 있다 하면![1531375522845](C:\Users\stud
 
 ![1531375602935](C:\Users\student\AppData\Local\Temp\1531375602935.png)
 
-이렇게 3개 요소가 배열된다면.
+이렇게 3개 요소가 배열된다면 한 요소당 4개씩 쓰는 거고.  (12를 동일하게 배분)
 
 
 
@@ -604,13 +622,17 @@ body에 붙여넣는다
 
 
 
-아래 클릭
+custom setting 링크가 따로 있기 때문!!
+
+==> 아래 클릭!
 
 ![1531377654608](C:\Users\student\AppData\Local\Temp\1531377654608.png)
 
 ![1531377719089](C:\Users\student\AppData\Local\Temp\1531377719089.png)
 
-이 url 복사
+이 링크가 따로 지정되어 있다. 우리도 넣어줘야 한다 저 추가 코드들을!! 
+
+==> url 복사
 
 
 
@@ -620,13 +642,15 @@ body에 붙여넣는다
 
 ![1531377798703](C:\Users\student\AppData\Local\Temp\1531377798703.png)
 
-된 거래.. 근데 이게 뭘 한 거징..
+됐당~
 
 
 
-#### 즉,  부트스트랩 그냥 제공 템플릿을 봐도 **디자인 그리드 합은 다 12이당**
+---
 
+*cf.*  즉,  부트스트랩 그냥 제공 템플릿을 봐도 **디자인 그리드 합은 다 12이당**
 
+---
 
 
 
@@ -634,7 +658,7 @@ body에 붙여넣는다
 
 이제, 
 
-이제까지  vscode로 해본 것을 c9 exhibition 프로젝트에 적용시켜 보자
+이제까지  vscode로 해본 것을 **c9 exhibition 프로젝트에** 적용시켜 보자
 
 1. 우선 `<header>` ~ `</header>`  부분을 복사해서 
 
@@ -654,7 +678,7 @@ layouts 폴더에 `_header.html.erb`파일을 만들어서 거기에 붙여넣�
 
 
 
-그리고 이번엔 `<main>` ~ `</main>` 복사
+2. 그리고 이번엔 `<main>` ~ `</main>` 복사
 
 ![1531383706345](C:\Users\student\AppData\Local\Temp\1531383706345.png)
 
@@ -668,23 +692,39 @@ layouts 폴더에 `_header.html.erb`파일을 만들어서 거기에 붙여넣�
 
 
 
-이제 우리 페이지에 맞게 내용 바꾸고 넣고 각각 한당
+3. 이제 우리 페이지에 맞게 내용 바꾸고 넣고 각각 맞게 바꾼당!!!
+
+---
 
 
 
-- *cf.* get bootstrap에 Components -> **Alerts**   : flash메시지 디자인
+---
+
+#### flash메시지 디자인 부트스트랩 적용~
+
+- get bootstrap에 Components -> **Alerts** 
+
+---
 
 
 
-- 각 link에 class 지정해서 스타일 넣기
+---
+
+#### **각 link에 class 지정해서 스타일 넣기**
 
 ![1531383356280](C:\Users\student\AppData\Local\Temp\1531383356280.png)
 
+---
 
 
-- 메인 로고 누르면 어느 페이지에서나 홈으로 가도록 하기 (layout  _header파일에서)
+
+---
+
+#### 메인 로고 누르면 어느 페이지에서나 홈으로 가도록 하기 (layout  _header파일에서)
 
 ![1531383341085](C:\Users\student\AppData\Local\Temp\1531383341085.png)
+
+---
 
 
 
