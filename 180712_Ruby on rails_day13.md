@@ -88,13 +88,19 @@ ko파일 보면  영어 <-> 한글 어떻게 호환되는 지 볼 수 있당
 
 
 
-gem devise 구글링
+'gem devise' 구글링 ㄱㄱ
 
 https://github.com/plataformatec/devise
 
+![1531384599107](C:\Users\student\AppData\Local\Temp\1531384599107.png)
+
+이 페이지 들어와서 쭉 스크롤 내려보면
+
 ![1531381700230](C:\Users\student\AppData\Local\Temp\1531381700230.png)
 
-빨간 박스 안에 첫 줄 복사한다. 아래와 같이 로그인이 되었냐? 이런 것들을 물어볼 수 있다
+이 부분 빨간 박스 안에 첫 줄 복사한다. 아래와 같이 로그인이 되었냐? 이런 것들을 물어볼 수 있다
+
+
 
 ![1531381709587](C:\Users\student\AppData\Local\Temp\1531381709587.png)
 
