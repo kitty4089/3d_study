@@ -82,13 +82,14 @@ ex. **스포카.** 백화점 포인트 쌓아주는 사업. 굉장히 잘하고 
 
   => body에서 해당 태그에 id / class = " " 이름 지정해 준 후 아래 스타일 코드는 head에 넣는다
 
+  ```css
   <style>
-              #welcome {				=>  *#붙이는 게 id*
-                  color: PALEVIOLETRED; font-style : italic; font-size:15px ; font-weight : bold
-              }
-              .search{color : CADETBLUE ; font-weight :bold} 	=>  *.을 붙이는 게 id*
-
+  	#welcome {			  (#붙이는 게 id)
+      		color: PALEVIOLETRED; font-style : italic; font-size:15px ; font-weight : bold
+  	}
+      .search{color : CADETBLUE ; font-weight :bold}    	 (.을 붙이는 게 class)
   </style>
+  ```
 
   (id/class이름 항상 " " 안에 스트링으로 해야함 유의)
 
